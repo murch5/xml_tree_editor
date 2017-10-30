@@ -1,0 +1,61 @@
+<root>
+    <viewset>
+        <title>ImageTesting</title>
+        <viewset_style></viewset_style>
+        <view>
+            <title>ImageTest</title>
+            <view_style></view_style>
+            <view_settings>
+                <engine>matplotlib</engine>
+                <row>1</row>
+                <col>1</col>
+            </view_settings>
+            <plot>
+                <subplot>
+                    <title>Image</title>
+                    <subplot_settings>
+                        <row>0</row>
+                        <col>0</col>
+                        <row_size>1</row_size>
+                        <col_size>1</col_size>
+                        <plot_type>Image</plot_type>
+                        <plot_engine>matplotlib</plot_engine>
+                    </subplot_settings>
+                    <data>
+                        <dataset>
+                            <name>2nd_rot</name>
+                            <type>Image</type>
+                            <processing>
+                                <Project>
+                                    <axis data_type="int">0</axis>
+                                    <function data_type="str">mean</function>
+                                </Project>
+                                <Slice>
+                                    <axis data_type="int">2</axis>
+                                    <slice data_type="li">1,1</slice>
+                                </Slice>
+                                <Squeeze>
+                                    <axis data_type="ti">2</axis>
+                                </Squeeze>
+                                <Export>
+                                    <file_name>img_output</file_name>
+                                </Export>
+                            </processing>
+                        </dataset>
+                    </data>
+                    <plot_style>
+                        <show_pct data_type="bool">True</show_pct>
+                        <axes>
+                            <grid>
+                                <x data_type="int">0</x>
+                                <y data_type="int">0</y>
+                            </grid>
+                        </axes>
+                    </plot_style>
+                    <annotate></annotate>
+                </subplot>
+
+            </plot>
+        </view>
+    </viewset>
+</root>
